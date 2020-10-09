@@ -4,6 +4,7 @@
 
 #include "G4VUserDetectorConstruction.hh"
 #include "globals.hh"
+#include "G4UserLimits.hh"
 
 class G4VPhysicalVolume;
 class G4LogicalVolume;
@@ -20,6 +21,8 @@ class DetectorConstruction : public G4VUserDetectorConstruction
 
     G4LogicalVolume* GetScoringVolume() const { return fScoringVolume; }
 
+  private:
+    G4UserLimits*      StepLimit;
   protected:
     G4LogicalVolume*  fScoringVolume;
 };

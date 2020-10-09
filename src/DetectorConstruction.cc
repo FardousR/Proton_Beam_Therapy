@@ -11,6 +11,7 @@
 #include "G4PVPlacement.hh"
 #include "G4SystemOfUnits.hh"
 #include "G4VSensitiveDetector.hh"
+
 //#include "PhysicalConstants.hh"
 
 
@@ -24,7 +25,9 @@ DetectorConstruction::DetectorConstruction()
 //****************************************************************************//
 
 DetectorConstruction::~DetectorConstruction()
-{ }
+{
+ delete StepLimit;
+}
 
 //****************************************************************************//
 
@@ -106,13 +109,19 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
                       checkOverlaps);        //overlaps checking
 
 
+  G4UserLimits* limit = new G4UserLimits();
+  // Sets a max Step length in the diamond :
+  G4double maxStep = 0.2*mm;
+  StepLimit = new G4UserLimits(maxStep);
+  logicalTarget->SetUserLimits(StepLimit);
+
   a = 207.2 *g/mole;
   density = 11.35 *g/cm3;
   new G4Material("Lead", z=82., a, density);
   G4Material* Grater_mat = nist->FindOrBuildMaterial("Lead");
 
   G4String  nameGrater = "Grater";
-  G4double  in_radius_Grater = 1.5*mm;
+  G4double  in_radius_Grater = 3.0*mm;
   G4double  out_radius_Grater = 200*mm;
   G4double  length_Grater = 200*mm;
   G4double  starting_angle_Grater = 0;

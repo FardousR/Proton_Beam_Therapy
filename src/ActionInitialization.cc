@@ -19,8 +19,10 @@ ActionInitialization::ActionInitialization(G4double   beam_energy_input,
                                            beam_beta_x    (beam_beta_x_input),
                                            beam_beta_y    (beam_beta_y_input)
 {
+  output_location = "/home/fardous/Desktop/Proton_Beam/OutputFile/";
   output_filename = "Energy_"+std::to_string(beam_energy)+"Alpha:_x"+std::to_string(beam_alpha_x)+"_y_"+std::to_string(beam_alpha_y)+
-                             "Beta:_x"+std::to_string(beam_beta_x)+"_y_"+std::to_string(beam_beta_y);
+                             "Beta:_x"+std::to_string(beam_beta_x)+"_y_"+std::to_string(beam_beta_y)+".root";
+  Output_File      = output_location + output_filename;
 }
 
 ActionInitialization::~ActionInitialization()
@@ -28,7 +30,7 @@ ActionInitialization::~ActionInitialization()
 
 void ActionInitialization::BuildForMaster() const
 {
-    RunAction* runAction = new RunAction;
+    RunAction* runAction = new RunAction(Output_File);
     SetUserAction(runAction);
 }
 
@@ -43,14 +45,12 @@ void ActionInitialization::Build() const
                                                                               beam_beta_y);
   SetUserAction(primaryGeneratorAction);
 
-  RunAction* runAction = new RunAction;
+  RunAction* runAction = new RunAction(Output_File);
   SetUserAction(runAction);
 
-  EventAction* eventAction = new EventAction;
+  EventAction* eventAction = new EventAction(runAction);
   SetUserAction(eventAction);
 
   SteppingAction* steppingAction = new SteppingAction(eventAction);
   SetUserAction(steppingAction);
-
-
 }

@@ -10,27 +10,33 @@
 #include "G4Track.hh"
 #include <iostream>
 #include <ostream>
+#include "RunAction.hh"
 
 class G4Event;
 
 class EventAction: public G4UserEventAction
      {
       private:   //Trackdata vectors
-  	     std::vector<G4int> EventID;
-  	     std::vector<G4int> TrackID;
-         std::vector<G4int> ParticleID;
-         std::vector<G4int> ParentID;
-  	     std::vector<G4ThreeVector> PrePosition;
-         std::vector<G4ThreeVector> PostPosition;
-         std::vector<G4ThreeVector> PreMomentumDir;
-         std::vector<G4ThreeVector> PostMomentumDir;
-         std::vector<G4double> EnergyDeposit;
-         std::vector<G4double> SecondaryEnergy;
-         std::vector<G4double> PreKE;
-         std::vector<G4double> PostKE;
+           std::vector<G4int> EventID;
+           std::vector<G4int> TrackID;
+           std::vector<G4int> ParticleID;
+           std::vector<G4int> ParentID;
+           std::vector<G4ThreeVector> PrePosition;
+           std::vector<G4ThreeVector> PostPosition;
+           std::vector<G4ThreeVector> PreMomentumDir;
+           std::vector<G4ThreeVector> PostMomentumDir;
+           std::vector<G4double> EnergyDeposit;
+           std::vector<G4double> SecondaryEnergy;
+           std::vector<G4double> PreKE;
+           std::vector<G4double> PostKE;
+           std::vector<G4double> LET;
+           std::vector<G4double> StepLength;
+
+           RunAction* fRunAction;
+
 
       public:
-           EventAction();
+           EventAction(RunAction*);
            ~EventAction();
            virtual void BeginOfEventAction(const G4Event*);
            virtual void EndOfEventAction(const G4Event*);
@@ -49,6 +55,8 @@ class EventAction: public G4UserEventAction
           EnergyDeposit.clear();
           PreKE.clear();
           PostKE.clear();
+          LET.clear();
+          StepLength.clear();
       }
 
 	  //Add methods for TrackData vectors
@@ -64,6 +72,8 @@ class EventAction: public G4UserEventAction
       void AddSecondaryEnergy(G4double SE) {SecondaryEnergy.push_back(SE);}
       void AddpreKE(G4double preKE){PreKE.push_back(preKE);}
       void AddpostKE(G4double postKE){PostKE.push_back(postKE);}
+      void AddLET(G4double let){LET.push_back(let);}
+      void AddStepLength(G4double steplength){StepLength.push_back(steplength);}
 
 
 	  //Get method for Post step position
@@ -79,6 +89,8 @@ class EventAction: public G4UserEventAction
       G4double GetSecEnergy(G4int i) {return SecondaryEnergy[i];}
       G4double GetpreKE(G4int i)  {return PreKE[i];}
       G4double GetpostKE(G4int i)  {return PostKE[i];}
+      G4double GetLET(G4int i)  {return LET[i];}
+      G4double GetStepLength(G4int i)  {return StepLength[i];}
      };
 
 #endif

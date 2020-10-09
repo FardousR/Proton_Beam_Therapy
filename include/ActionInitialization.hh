@@ -28,6 +28,8 @@ class ActionInitialization : public G4VUserActionInitialization
        G4double   beam_alpha_y;
        G4double   beam_beta_x;
        G4double   beam_beta_y;
-       G4String   output_filename; 
+       G4String   output_filename;
+       G4String   output_location;
+       G4String   Output_File;    
 };
 #endif

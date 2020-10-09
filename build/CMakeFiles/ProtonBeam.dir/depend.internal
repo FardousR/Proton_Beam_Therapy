@@ -175,7 +175,6 @@ CMakeFiles/ProtonBeam.dir/ProtonBeam.cc.o
  /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4Exp.hh
  /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4FastVector.hh
  /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4Log.hh
- /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4MTBarrier.hh
  /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4OrderedTable.hh
  /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4PhysicsModelCatalog.hh
  /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4PhysicsOrderedFreeVector.hh
@@ -193,6 +192,8 @@ CMakeFiles/ProtonBeam.dir/ProtonBeam.cc.o
  /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4Threading.hh
  /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4ThreeVector.hh
  /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4Types.hh
+ /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4UserLimits.hh
+ /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4UserLimits.icc
  /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4VExceptionHandler.hh
  /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4VStateDependent.hh
  /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4coutDestination.hh
@@ -271,10 +272,8 @@ CMakeFiles/ProtonBeam.dir/ProtonBeam.cc.o
  /home/fardous/Software/geant4.10.06.p02/source/processes/management/include/G4ProcessVector.hh
  /home/fardous/Software/geant4.10.06.p02/source/processes/management/include/G4ProcessVector.icc
  /home/fardous/Software/geant4.10.06.p02/source/processes/management/include/G4VProcess.hh
- /home/fardous/Software/geant4.10.06.p02/source/run/include/G4MTRunManager.hh
  /home/fardous/Software/geant4.10.06.p02/source/run/include/G4PhysicsListHelper.hh
  /home/fardous/Software/geant4.10.06.p02/source/run/include/G4PhysicsListOrderingParameter.hh
- /home/fardous/Software/geant4.10.06.p02/source/run/include/G4RNGHelper.hh
  /home/fardous/Software/geant4.10.06.p02/source/run/include/G4RunManager.hh
  /home/fardous/Software/geant4.10.06.p02/source/run/include/G4RunManagerKernel.hh
  /home/fardous/Software/geant4.10.06.p02/source/run/include/G4VModularPhysicsList.hh
@@ -476,6 +475,7 @@ CMakeFiles/ProtonBeam.dir/ProtonBeam.cc.o
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h
 CMakeFiles/ProtonBeam.dir/src/ActionInitialization.cc.o
  ../include/ActionInitialization.hh
+ ../include/Analysis.hh
  ../include/EventAction.hh
  ../include/PrimaryGeneratorAction.hh
  ../include/RunAction.hh
@@ -535,6 +535,155 @@ CMakeFiles/ProtonBeam.dir/src/ActionInitialization.cc.o
  /home/fardous/Software/geant4.10.06.p02/source/analysis/accumulables/include/G4MergeMode.hh
  /home/fardous/Software/geant4.10.06.p02/source/analysis/accumulables/include/G4VAccumulable.hh
  /home/fardous/Software/geant4.10.06.p02/source/analysis/accumulables/include/G4VAccumulable.icc
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/S_STRING
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/charp_out
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/cid
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/cids
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/cstr
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/forit
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/get_lines
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/axes
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/axis
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/b1
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/b2
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/b3
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/base_histo
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/h1
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/h1d
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/h1df
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/h2
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/h2d
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/h2df
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/h3
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/h3d
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/h3df
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/histo_data
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/hmpi
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/p1
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/p1d
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/p2
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/p2d
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/profile_data
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/impi
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/lina/eqT
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/long_out
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/mapmanip
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/mem
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/mnmx
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/ntuple_binding
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/ntuple_booking
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/num2s
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/path
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/platform
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/press_func
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rcmp
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rntuple
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rroot/base_leaf
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rroot/buffer
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rroot/ifac
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rroot/iro
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rroot/leaf
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rroot/named
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rroot/ntuple
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rroot/object
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rroot/rbuf
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rroot/stl_vector
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/safe_cast
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/scast
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/snpf
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/sout
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/sprintf
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/sto
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/store/iobj_const_visitor
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/store/iobj_visitor
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/store/osc_streamers
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/strip
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/stype
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/tosu
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/touplow
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/typedefs
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/vdata
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/vfind
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/vmanip
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/basket
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/branch
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/branch_element
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/branch_object
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/bufobj
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/columns.icc
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/date
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/directory
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/element
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/file
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/free_seg
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/ibo
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/icol
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/idir
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/ifile
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/imutex
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/info
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/infos
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/iobject
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/itree
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/key
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/member_writer
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/mpi_create_basket
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/ntuple
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/seek
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/streamers
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/to
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/tree
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/wbuf
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/hntools/include/G4H1ToolsManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/hntools/include/G4H2ToolsManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/hntools/include/G4H3ToolsManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/hntools/include/G4P1ToolsManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/hntools/include/G4P2ToolsManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/hntools/include/G4ToolsAnalysisManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/hntools/include/G4ToolsAnalysisManager.icc
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/hntools/include/G4ToolsAnalysisReader.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/hntools/include/G4ToolsAnalysisReader.icc
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/hntools/include/g4hntools_defs.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4AnalysisManagerState.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4AnalysisUtilities.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4AnalysisVerbose.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4BaseAnalysisManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4BaseFileManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4BaseNtupleManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4BaseRNtupleManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4BinScheme.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4Fcn.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4HnInformation.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4HnManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4THnManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4THnManager.icc
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4TNtupleDescription.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4TNtupleManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4TNtupleManager.icc
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4TRNtupleDescription.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4TRNtupleManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4TRNtupleManager.icc
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VAnalysisManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VAnalysisManager.icc
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VAnalysisReader.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VAnalysisReader.icc
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VFileManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VH1Manager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VH2Manager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VH3Manager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VNtupleManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VP1Manager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VP2Manager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VRNtupleManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/root/include/G4RootAnalysisManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/root/include/G4RootAnalysisManager.icc
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/root/include/G4RootAnalysisReader.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/root/include/G4RootAnalysisReader.icc
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/root/include/G4RootFileManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/root/include/G4RootNtupleManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/root/include/G4RootRNtupleManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/root/include/g4root.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/root/include/g4root_defs.hh
  /home/fardous/Software/geant4.10.06.p02/source/event/include/G4ParticleGun.hh
  /home/fardous/Software/geant4.10.06.p02/source/event/include/G4UserEventAction.hh
  /home/fardous/Software/geant4.10.06.p02/source/event/include/G4VPrimaryGenerator.hh
@@ -913,6 +1062,8 @@ CMakeFiles/ProtonBeam.dir/src/DetectorConstruction.cc.o
  /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4Threading.hh
  /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4ThreeVector.hh
  /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4Types.hh
+ /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4UserLimits.hh
+ /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4UserLimits.icc
  /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4VExceptionHandler.hh
  /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4ios.hh
  /home/fardous/Software/geant4.10.06.p02/source/global/management/include/globals.hh
@@ -996,6 +1147,7 @@ CMakeFiles/ProtonBeam.dir/src/DetectorConstruction.cc.o
  /home/fardous/Software/geant4.10.06.p02/source/tracking/include/G4VSteppingVerbose.hh
  /home/fardous/Software/geant4.10.06.p02/source/tracking/include/G4VTrajectory.hh
 CMakeFiles/ProtonBeam.dir/src/EventAction.cc.o
+ ../include/Analysis.hh
  ../include/EventAction.hh
  ../include/RunAction.hh
  /home/fardous/Desktop/Project Old File/Proton_Beam_Therapy/src/EventAction.cc
@@ -1005,6 +1157,155 @@ CMakeFiles/ProtonBeam.dir/src/EventAction.cc.o
  /home/fardous/Software/geant4.10.06.p02/source/analysis/accumulables/include/G4MergeMode.hh
  /home/fardous/Software/geant4.10.06.p02/source/analysis/accumulables/include/G4VAccumulable.hh
  /home/fardous/Software/geant4.10.06.p02/source/analysis/accumulables/include/G4VAccumulable.icc
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/S_STRING
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/charp_out
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/cid
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/cids
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/cstr
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/forit
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/get_lines
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/axes
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/axis
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/b1
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/b2
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/b3
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/base_histo
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/h1
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/h1d
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/h1df
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/h2
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/h2d
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/h2df
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/h3
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/h3d
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/h3df
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/histo_data
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/hmpi
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/p1
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/p1d
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/p2
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/p2d
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/profile_data
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/impi
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/lina/eqT
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/long_out
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/mapmanip
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/mem
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/mnmx
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/ntuple_binding
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/ntuple_booking
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/num2s
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/path
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/platform
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/press_func
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rcmp
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rntuple
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rroot/base_leaf
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rroot/buffer
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rroot/ifac
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rroot/iro
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rroot/leaf
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rroot/named
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rroot/ntuple
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rroot/object
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rroot/rbuf
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rroot/stl_vector
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/safe_cast
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/scast
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/snpf
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/sout
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/sprintf
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/sto
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/store/iobj_const_visitor
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/store/iobj_visitor
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/store/osc_streamers
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/strip
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/stype
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/tosu
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/touplow
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/typedefs
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/vdata
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/vfind
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/vmanip
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/basket
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/branch
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/branch_element
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/branch_object
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/bufobj
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/columns.icc
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/date
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/directory
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/element
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/file
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/free_seg
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/ibo
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/icol
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/idir
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/ifile
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/imutex
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/info
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/infos
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/iobject
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/itree
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/key
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/member_writer
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/mpi_create_basket
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/ntuple
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/seek
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/streamers
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/to
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/tree
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/wbuf
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/hntools/include/G4H1ToolsManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/hntools/include/G4H2ToolsManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/hntools/include/G4H3ToolsManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/hntools/include/G4P1ToolsManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/hntools/include/G4P2ToolsManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/hntools/include/G4ToolsAnalysisManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/hntools/include/G4ToolsAnalysisManager.icc
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/hntools/include/G4ToolsAnalysisReader.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/hntools/include/G4ToolsAnalysisReader.icc
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/hntools/include/g4hntools_defs.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4AnalysisManagerState.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4AnalysisUtilities.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4AnalysisVerbose.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4BaseAnalysisManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4BaseFileManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4BaseNtupleManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4BaseRNtupleManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4BinScheme.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4Fcn.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4HnInformation.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4HnManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4THnManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4THnManager.icc
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4TNtupleDescription.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4TNtupleManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4TNtupleManager.icc
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4TRNtupleDescription.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4TRNtupleManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4TRNtupleManager.icc
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VAnalysisManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VAnalysisManager.icc
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VAnalysisReader.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VAnalysisReader.icc
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VFileManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VH1Manager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VH2Manager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VH3Manager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VNtupleManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VP1Manager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VP2Manager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VRNtupleManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/root/include/G4RootAnalysisManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/root/include/G4RootAnalysisManager.icc
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/root/include/G4RootAnalysisReader.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/root/include/G4RootAnalysisReader.icc
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/root/include/G4RootFileManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/root/include/G4RootNtupleManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/root/include/G4RootRNtupleManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/root/include/g4root.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/root/include/g4root_defs.hh
  /home/fardous/Software/geant4.10.06.p02/source/digits_hits/digits/include/G4DCofThisEvent.hh
  /home/fardous/Software/geant4.10.06.p02/source/digits_hits/digits/include/G4VDigiCollection.hh
  /home/fardous/Software/geant4.10.06.p02/source/digits_hits/hits/include/G4HCofThisEvent.hh
@@ -1387,6 +1688,7 @@ CMakeFiles/ProtonBeam.dir/src/PrimaryGeneratorAction.cc.o
  /home/fardous/Software/geant4.10.06.p02/source/particles/management/include/pwdefs.hh
  /home/fardous/Software/geant4.10.06.p02/source/run/include/G4VUserPrimaryGeneratorAction.hh
 CMakeFiles/ProtonBeam.dir/src/RunAction.cc.o
+ ../include/Analysis.hh
  ../include/DetectorConstruction.hh
  ../include/PrimaryGeneratorAction.hh
  ../include/RunAction.hh
@@ -1447,6 +1749,155 @@ CMakeFiles/ProtonBeam.dir/src/RunAction.cc.o
  /home/fardous/Software/geant4.10.06.p02/source/analysis/accumulables/include/G4MergeMode.hh
  /home/fardous/Software/geant4.10.06.p02/source/analysis/accumulables/include/G4VAccumulable.hh
  /home/fardous/Software/geant4.10.06.p02/source/analysis/accumulables/include/G4VAccumulable.icc
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/S_STRING
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/charp_out
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/cid
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/cids
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/cstr
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/forit
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/get_lines
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/axes
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/axis
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/b1
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/b2
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/b3
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/base_histo
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/h1
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/h1d
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/h1df
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/h2
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/h2d
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/h2df
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/h3
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/h3d
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/h3df
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/histo_data
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/hmpi
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/p1
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/p1d
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/p2
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/p2d
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/profile_data
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/impi
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/lina/eqT
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/long_out
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/mapmanip
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/mem
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/mnmx
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/ntuple_binding
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/ntuple_booking
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/num2s
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/path
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/platform
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/press_func
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rcmp
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rntuple
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rroot/base_leaf
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rroot/buffer
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rroot/ifac
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rroot/iro
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rroot/leaf
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rroot/named
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rroot/ntuple
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rroot/object
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rroot/rbuf
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rroot/stl_vector
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/safe_cast
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/scast
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/snpf
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/sout
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/sprintf
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/sto
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/store/iobj_const_visitor
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/store/iobj_visitor
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/store/osc_streamers
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/strip
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/stype
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/tosu
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/touplow
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/typedefs
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/vdata
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/vfind
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/vmanip
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/basket
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/branch
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/branch_element
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/branch_object
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/bufobj
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/columns.icc
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/date
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/directory
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/element
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/file
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/free_seg
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/ibo
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/icol
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/idir
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/ifile
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/imutex
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/info
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/infos
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/iobject
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/itree
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/key
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/member_writer
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/mpi_create_basket
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/ntuple
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/seek
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/streamers
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/to
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/tree
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/wbuf
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/hntools/include/G4H1ToolsManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/hntools/include/G4H2ToolsManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/hntools/include/G4H3ToolsManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/hntools/include/G4P1ToolsManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/hntools/include/G4P2ToolsManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/hntools/include/G4ToolsAnalysisManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/hntools/include/G4ToolsAnalysisManager.icc
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/hntools/include/G4ToolsAnalysisReader.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/hntools/include/G4ToolsAnalysisReader.icc
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/hntools/include/g4hntools_defs.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4AnalysisManagerState.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4AnalysisUtilities.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4AnalysisVerbose.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4BaseAnalysisManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4BaseFileManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4BaseNtupleManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4BaseRNtupleManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4BinScheme.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4Fcn.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4HnInformation.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4HnManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4THnManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4THnManager.icc
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4TNtupleDescription.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4TNtupleManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4TNtupleManager.icc
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4TRNtupleDescription.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4TRNtupleManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4TRNtupleManager.icc
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VAnalysisManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VAnalysisManager.icc
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VAnalysisReader.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VAnalysisReader.icc
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VFileManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VH1Manager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VH2Manager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VH3Manager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VNtupleManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VP1Manager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VP2Manager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VRNtupleManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/root/include/G4RootAnalysisManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/root/include/G4RootAnalysisManager.icc
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/root/include/G4RootAnalysisReader.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/root/include/G4RootAnalysisReader.icc
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/root/include/G4RootFileManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/root/include/G4RootNtupleManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/root/include/G4RootRNtupleManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/root/include/g4root.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/root/include/g4root_defs.hh
  /home/fardous/Software/geant4.10.06.p02/source/digits_hits/digits/include/G4DCofThisEvent.hh
  /home/fardous/Software/geant4.10.06.p02/source/digits_hits/digits/include/G4VDigiCollection.hh
  /home/fardous/Software/geant4.10.06.p02/source/digits_hits/hits/include/G4HCofThisEvent.hh
@@ -1627,6 +2078,8 @@ CMakeFiles/ProtonBeam.dir/src/RunAction.cc.o
  /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4Types.hh
  /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4UnitsTable.hh
  /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4UnitsTable.icc
+ /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4UserLimits.hh
+ /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4UserLimits.icc
  /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4VExceptionHandler.hh
  /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4VNotifier.hh
  /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4ios.hh
@@ -1704,6 +2157,7 @@ CMakeFiles/ProtonBeam.dir/src/RunAction.cc.o
  /home/fardous/Software/geant4.10.06.p02/source/tracking/include/G4VSteppingVerbose.hh
  /home/fardous/Software/geant4.10.06.p02/source/tracking/include/G4VTrajectory.hh
 CMakeFiles/ProtonBeam.dir/src/SteppingAction.cc.o
+ ../include/Analysis.hh
  ../include/DetectorConstruction.hh
  ../include/EventAction.hh
  ../include/PrimaryGeneratorAction.hh
@@ -1764,6 +2218,155 @@ CMakeFiles/ProtonBeam.dir/src/SteppingAction.cc.o
  /home/fardous/Software/geant4.10.06.p02/source/analysis/accumulables/include/G4MergeMode.hh
  /home/fardous/Software/geant4.10.06.p02/source/analysis/accumulables/include/G4VAccumulable.hh
  /home/fardous/Software/geant4.10.06.p02/source/analysis/accumulables/include/G4VAccumulable.icc
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/S_STRING
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/charp_out
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/cid
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/cids
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/cstr
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/forit
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/get_lines
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/axes
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/axis
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/b1
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/b2
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/b3
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/base_histo
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/h1
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/h1d
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/h1df
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/h2
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/h2d
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/h2df
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/h3
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/h3d
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/h3df
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/histo_data
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/hmpi
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/p1
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/p1d
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/p2
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/p2d
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/histo/profile_data
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/impi
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/lina/eqT
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/long_out
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/mapmanip
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/mem
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/mnmx
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/ntuple_binding
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/ntuple_booking
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/num2s
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/path
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/platform
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/press_func
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rcmp
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rntuple
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rroot/base_leaf
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rroot/buffer
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rroot/ifac
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rroot/iro
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rroot/leaf
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rroot/named
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rroot/ntuple
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rroot/object
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rroot/rbuf
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/rroot/stl_vector
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/safe_cast
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/scast
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/snpf
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/sout
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/sprintf
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/sto
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/store/iobj_const_visitor
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/store/iobj_visitor
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/store/osc_streamers
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/strip
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/stype
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/tosu
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/touplow
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/typedefs
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/vdata
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/vfind
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/vmanip
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/basket
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/branch
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/branch_element
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/branch_object
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/bufobj
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/columns.icc
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/date
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/directory
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/element
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/file
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/free_seg
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/ibo
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/icol
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/idir
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/ifile
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/imutex
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/info
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/infos
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/iobject
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/itree
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/key
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/member_writer
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/mpi_create_basket
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/ntuple
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/seek
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/streamers
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/to
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/tree
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/g4tools/include/tools/wroot/wbuf
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/hntools/include/G4H1ToolsManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/hntools/include/G4H2ToolsManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/hntools/include/G4H3ToolsManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/hntools/include/G4P1ToolsManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/hntools/include/G4P2ToolsManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/hntools/include/G4ToolsAnalysisManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/hntools/include/G4ToolsAnalysisManager.icc
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/hntools/include/G4ToolsAnalysisReader.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/hntools/include/G4ToolsAnalysisReader.icc
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/hntools/include/g4hntools_defs.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4AnalysisManagerState.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4AnalysisUtilities.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4AnalysisVerbose.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4BaseAnalysisManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4BaseFileManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4BaseNtupleManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4BaseRNtupleManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4BinScheme.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4Fcn.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4HnInformation.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4HnManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4THnManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4THnManager.icc
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4TNtupleDescription.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4TNtupleManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4TNtupleManager.icc
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4TRNtupleDescription.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4TRNtupleManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4TRNtupleManager.icc
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VAnalysisManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VAnalysisManager.icc
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VAnalysisReader.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VAnalysisReader.icc
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VFileManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VH1Manager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VH2Manager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VH3Manager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VNtupleManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VP1Manager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VP2Manager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/management/include/G4VRNtupleManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/root/include/G4RootAnalysisManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/root/include/G4RootAnalysisManager.icc
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/root/include/G4RootAnalysisReader.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/root/include/G4RootAnalysisReader.icc
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/root/include/G4RootFileManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/root/include/G4RootNtupleManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/root/include/G4RootRNtupleManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/root/include/g4root.hh
+ /home/fardous/Software/geant4.10.06.p02/source/analysis/root/include/g4root_defs.hh
  /home/fardous/Software/geant4.10.06.p02/source/digits_hits/digits/include/G4DCofThisEvent.hh
  /home/fardous/Software/geant4.10.06.p02/source/digits_hits/digits/include/G4VDigiCollection.hh
  /home/fardous/Software/geant4.10.06.p02/source/digits_hits/hits/include/G4HCofThisEvent.hh
@@ -1925,8 +2528,10 @@ CMakeFiles/ProtonBeam.dir/src/SteppingAction.cc.o
  /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4ExceptionSeverity.hh
  /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4Exp.hh
  /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4FastVector.hh
+ /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4LPhysicsFreeVector.hh
  /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4Log.hh
  /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4OrderedTable.hh
+ /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4PhysicsFreeVector.hh
  /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4PhysicsModelCatalog.hh
  /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4PhysicsOrderedFreeVector.hh
  /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4PhysicsTable.hh
@@ -1934,6 +2539,7 @@ CMakeFiles/ProtonBeam.dir/src/SteppingAction.cc.o
  /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4PhysicsVector.hh
  /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4PhysicsVector.icc
  /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4PhysicsVectorType.hh
+ /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4Pow.hh
  /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4ReferenceCountedHandle.hh
  /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4RotationMatrix.hh
  /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4String.hh
@@ -1942,6 +2548,8 @@ CMakeFiles/ProtonBeam.dir/src/SteppingAction.cc.o
  /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4Threading.hh
  /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4ThreeVector.hh
  /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4Types.hh
+ /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4UserLimits.hh
+ /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4UserLimits.icc
  /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4VExceptionHandler.hh
  /home/fardous/Software/geant4.10.06.p02/source/global/management/include/G4ios.hh
  /home/fardous/Software/geant4.10.06.p02/source/global/management/include/globals.hh
@@ -1956,6 +2564,7 @@ CMakeFiles/ProtonBeam.dir/src/SteppingAction.cc.o
  /home/fardous/Software/geant4.10.06.p02/source/materials/include/G4Element.hh
  /home/fardous/Software/geant4.10.06.p02/source/materials/include/G4ElementTable.hh
  /home/fardous/Software/geant4.10.06.p02/source/materials/include/G4ElementVector.hh
+ /home/fardous/Software/geant4.10.06.p02/source/materials/include/G4ICRU90StoppingData.hh
  /home/fardous/Software/geant4.10.06.p02/source/materials/include/G4IonisParamElm.hh
  /home/fardous/Software/geant4.10.06.p02/source/materials/include/G4IonisParamMat.hh
  /home/fardous/Software/geant4.10.06.p02/source/materials/include/G4Isotope.hh
@@ -1966,6 +2575,9 @@ CMakeFiles/ProtonBeam.dir/src/SteppingAction.cc.o
  /home/fardous/Software/geant4.10.06.p02/source/materials/include/G4MaterialPropertiesTable.icc
  /home/fardous/Software/geant4.10.06.p02/source/materials/include/G4MaterialPropertyVector.hh
  /home/fardous/Software/geant4.10.06.p02/source/materials/include/G4MaterialTable.hh
+ /home/fardous/Software/geant4.10.06.p02/source/materials/include/G4NistElementBuilder.hh
+ /home/fardous/Software/geant4.10.06.p02/source/materials/include/G4NistManager.hh
+ /home/fardous/Software/geant4.10.06.p02/source/materials/include/G4NistMaterialBuilder.hh
  /home/fardous/Software/geant4.10.06.p02/source/materials/include/G4SandiaTable.hh
  /home/fardous/Software/geant4.10.06.p02/source/particles/management/include/G4DynamicParticle.hh
  /home/fardous/Software/geant4.10.06.p02/source/particles/management/include/G4DynamicParticle.icc
@@ -1980,6 +2592,19 @@ CMakeFiles/ProtonBeam.dir/src/SteppingAction.cc.o
  /home/fardous/Software/geant4.10.06.p02/source/particles/management/include/G4PrimaryParticle.hh
  /home/fardous/Software/geant4.10.06.p02/source/particles/management/include/G4PrimaryVertex.hh
  /home/fardous/Software/geant4.10.06.p02/source/particles/management/include/pwdefs.hh
+ /home/fardous/Software/geant4.10.06.p02/source/processes/cuts/include/G4MCCIndexConversionTable.hh
+ /home/fardous/Software/geant4.10.06.p02/source/processes/cuts/include/G4MaterialCutsCouple.hh
+ /home/fardous/Software/geant4.10.06.p02/source/processes/cuts/include/G4ProductionCuts.hh
+ /home/fardous/Software/geant4.10.06.p02/source/processes/cuts/include/G4ProductionCutsTable.hh
+ /home/fardous/Software/geant4.10.06.p02/source/processes/electromagnetic/utils/include/G4AtomicShell.hh
+ /home/fardous/Software/geant4.10.06.p02/source/processes/electromagnetic/utils/include/G4AtomicShellEnumerator.hh
+ /home/fardous/Software/geant4.10.06.p02/source/processes/electromagnetic/utils/include/G4DNAModelSubType.hh
+ /home/fardous/Software/geant4.10.06.p02/source/processes/electromagnetic/utils/include/G4EmCalculator.hh
+ /home/fardous/Software/geant4.10.06.p02/source/processes/electromagnetic/utils/include/G4EmParameters.hh
+ /home/fardous/Software/geant4.10.06.p02/source/processes/electromagnetic/utils/include/G4EmSaturation.hh
+ /home/fardous/Software/geant4.10.06.p02/source/processes/electromagnetic/utils/include/G4MscStepLimitType.hh
+ /home/fardous/Software/geant4.10.06.p02/source/processes/electromagnetic/utils/include/G4NuclearFormfactorType.hh
+ /home/fardous/Software/geant4.10.06.p02/source/processes/electromagnetic/utils/include/G4VAtomDeexcitation.hh
  /home/fardous/Software/geant4.10.06.p02/source/processes/management/include/G4ProcessManager.hh
  /home/fardous/Software/geant4.10.06.p02/source/processes/management/include/G4ProcessManager.icc
  /home/fardous/Software/geant4.10.06.p02/source/processes/management/include/G4ProcessType.hh

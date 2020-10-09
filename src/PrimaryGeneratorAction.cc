@@ -60,7 +60,6 @@ PrimaryGeneratorAction::PrimaryGeneratorAction(G4double   beam_energy_input,
   // Get the cholesky decomposition
   TDecompChol covarX_Utmp(covarX,1e-9);
   covarX_Utmp.Decompose();
-  covarX_Utmp.Print();
   covarX_L.ResizeTo(covarX);
   covarX_L = covarX_Utmp.GetU();
   // Get the lower-tridiagonal that is needed for the generation
@@ -68,7 +67,6 @@ PrimaryGeneratorAction::PrimaryGeneratorAction(G4double   beam_energy_input,
 
   TDecompChol covarY_Utmp(covarY,1e-9);
   covarY_Utmp.Decompose();
-  covarY_Utmp.Print();
   covarY_L.ResizeTo(covarY);
   covarY_L = covarY_Utmp.GetU();
   covarY_L.Transpose(covarY_L);
