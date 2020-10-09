@@ -13,6 +13,8 @@
 #include "G4UIExecutive.hh"
 #include "Randomize.hh"
 #include "G4PhysListFactory.hh"
+#include "G4StepLimiterPhysics.hh"
+#include <getopt.h>
 
 #ifdef G4MULTITHREADED
 #include "G4MTRunManager.hh"
@@ -20,13 +22,32 @@
 #include "G4RunManager.hh"
 #endif
 
+#ifdef G4VIS_USE
+#include "G4VisExecutive.hh"
+#endif
 
+#ifdef G4UI_USE
+#include "G4UIExecutive.hh"
+#endif
 
-
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 int main(int argc,char** argv)
 {
+    DetectorConstruction* detector;
+    G4double beam_energy = 150;
+    G4double beam_size = 1.5;
+    G4double beam_alpha = 4.0;
+    G4double beam_beta  = 0.8;
+    G4int    num_particle = 1500;
+    G4double max_step_lenght = .02;
+
+    G4double   beam_energy_input;
+    G4double   beam_size_input;
+    G4double   beam_alpha_x_input;
+    G4double   beam_alpha_y_input;
+    G4double   beam_beta_x_input;
+    G4double   beam_beta_y_input;
+
   // Detect interactive mode (if no arguments) and define UI session
   //
   G4UIExecutive* ui = 0;
@@ -39,7 +60,7 @@ int main(int argc,char** argv)
   G4Random::setTheEngine(new CLHEP::RanecuEngine);
 
 
-  // Construct the default run manager
+  //Construct the default run manager
   #ifdef G4MULTITHREADED
     G4MTRunManager* runManager = new G4MTRunManager;
   #else
@@ -49,14 +70,20 @@ int main(int argc,char** argv)
   /************** Set mandatory initialization classes*************/
 
   // Detector construction
-  runManager->SetUserInitialization(new DetectorConstruction());
+  detector = new DetectorConstruction();
+  runManager->SetUserInitialization(detector);
   // Physics list
   G4PhysListFactory physListFactory;
   const G4String phylistname = "QGSP_BIC_EMY";
   G4VModularPhysicsList* physicsList = physListFactory.GetReferencePhysList(phylistname);
   runManager->SetUserInitialization(physicsList);
   // User action initialization
-  runManager->SetUserInitialization(new ActionInitialization());
+  runManager->SetUserInitialization(new ActionInitialization(beam_energy,
+                                                             beam_size_input,
+                                                             beam_alpha_x_input,
+                                                             beam_alpha_y_input,
+                                                             beam_beta_x_input,
+                                                             beam_beta_y_input));
 
 
   // Initialize visualization

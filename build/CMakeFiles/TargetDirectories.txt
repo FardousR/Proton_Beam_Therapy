@@ -1,0 +1,8 @@
+/home/fardous/Desktop/Project Old File/Proton_Beam_Therapy/build/CMakeFiles/install/strip.dir
+/home/fardous/Desktop/Project Old File/Proton_Beam_Therapy/build/CMakeFiles/install/local.dir
+/home/fardous/Desktop/Project Old File/Proton_Beam_Therapy/build/CMakeFiles/install.dir
+/home/fardous/Desktop/Project Old File/Proton_Beam_Therapy/build/CMakeFiles/list_install_components.dir
+/home/fardous/Desktop/Project Old File/Proton_Beam_Therapy/build/CMakeFiles/rebuild_cache.dir
+/home/fardous/Desktop/Project Old File/Proton_Beam_Therapy/build/CMakeFiles/edit_cache.dir
+/home/fardous/Desktop/Project Old File/Proton_Beam_Therapy/build/CMakeFiles/B1.dir
+/home/fardous/Desktop/Project Old File/Proton_Beam_Therapy/build/CMakeFiles/ProtonBeam.dir
