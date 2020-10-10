@@ -63,7 +63,7 @@ int main(int argc,char** argv)
 
 
   // Detect interactive mode (if no arguments) and define UI session
-  //
+
   G4UIExecutive* ui = 0;
   if ( argc == 1 ) {
     ui = new G4UIExecutive(argc, argv);
@@ -108,6 +108,7 @@ int main(int argc,char** argv)
                                                              gun_z_position));
 
 
+
   // Initialize visualization
   G4VisManager* visManager = new G4VisExecutive;
   visManager->Initialize();
@@ -129,8 +130,6 @@ int main(int argc,char** argv)
     ui->SessionStart();
     delete ui;
   }
-
-  // UImanager->ApplyCommand(G4String("/run/beamOn ") + std::to_string(num_particle));
 
   // Job termination
   // Free the store: user actions, physics_list and detector_description are

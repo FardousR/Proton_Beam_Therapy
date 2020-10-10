@@ -5,6 +5,9 @@
 #include "EventAction.hh"
 #include "SteppingAction.hh"
 #include "G4SystemOfUnits.hh"
+#include "G4SystemOfUnits.hh"
+#include <string>
+#include "globals.hh"
 
 
 ActionInitialization::ActionInitialization(G4double   beam_energy_input,
@@ -31,8 +34,8 @@ ActionInitialization::ActionInitialization(G4double   beam_energy_input,
                                            gun_z_position       (gun_z_position_input)
 {
   output_location = "/home/fardous/Desktop/Proton_Beam/OutputFile/";
-  output_filename = "Energy_"+std::to_string(beam_energy)+"Alpha:_x"+std::to_string(beam_alpha_x)+"_y_"+std::to_string(beam_alpha_y)+
-                             "Beta:_x"+std::to_string(beam_beta_x)+"_y_"+std::to_string(beam_beta_y)+".root";
+  output_filename = "Energy_"+std::to_string((G4int)beam_energy)+"_Alpha:_x_"+(std::to_string(beam_alpha_x)).substr (0,3)+"_y_"+(std::to_string(beam_alpha_y)).substr (0,3)+
+                             "_Beta:_x_"+(std::to_string(beam_beta_x)).substr (0,5)+"mm_y_"+(std::to_string(beam_beta_x)).substr (0,5)+"mm_y_"+".root";
   Output_File      = output_location + output_filename;
 }
 
