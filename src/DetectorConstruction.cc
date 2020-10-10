@@ -17,9 +17,13 @@
 
 //****************************************************************************//
 
-DetectorConstruction::DetectorConstruction()
-: G4VUserDetectorConstruction(),
-  fScoringVolume(0)
+DetectorConstruction::DetectorConstruction(G4bool       collimator_input,
+                                           G4double     collimator_radius_input,
+                                           G4double     max_step_lenght_input): G4VUserDetectorConstruction(),
+                                           collimator           (collimator_input),
+                                           collimator_radius    (collimator_radius_input),
+                                           max_step_lenght      (max_step_lenght_input),
+                                           fScoringVolume       (NULL)
 { }
 
 //****************************************************************************//
@@ -109,42 +113,45 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
                       checkOverlaps);        //overlaps checking
 
 
-  G4UserLimits* limit = new G4UserLimits();
   // Sets a max Step length in the diamond :
-  G4double maxStep = 0.2*mm;
-  StepLimit = new G4UserLimits(maxStep);
+  StepLimit = new G4UserLimits(max_step_lenght);
   logicalTarget->SetUserLimits(StepLimit);
 
-  a = 207.2 *g/mole;
-  density = 11.35 *g/cm3;
-  new G4Material("Lead", z=82., a, density);
-  G4Material* Grater_mat = nist->FindOrBuildMaterial("Lead");
 
-  G4String  nameGrater = "Grater";
-  G4double  in_radius_Grater = 3.0*mm;
-  G4double  out_radius_Grater = 200*mm;
-  G4double  length_Grater = 200*mm;
-  G4double  starting_angle_Grater = 0;
-  G4double  segment_angle_Grater = 360*degree;
+  if(collimator)
+  {
+
+      a = 207.2 *g/mole;
+      density = 11.35 *g/cm3;
+      new G4Material("Lead", z=82., a, density);
+      G4Material* Collimator_mat = nist->FindOrBuildMaterial("Lead");
+
+      G4String  nameCollimator = "Collimator";
+      G4double  in_radius_Collimator = collimator_radius;
+      G4double  out_radius_Collimator = 200*mm;
+      G4double  length_Collimator = 200*mm;
+      G4double  starting_angle_Collimator = 0;
+      G4double  segment_angle_Collimator = 360*degree;
 
 
-  G4Tubs* solidGrater =
-    new G4Tubs(nameGrater, in_radius_Grater, out_radius_Grater, 0.5*length_Grater, starting_angle_Grater, segment_angle_Grater);
+      G4Tubs* solidCollimator =
+        new G4Tubs(nameCollimator, in_radius_Collimator, out_radius_Collimator, 0.5*length_Collimator, starting_angle_Collimator, segment_angle_Collimator);
 
-  G4LogicalVolume* logicalGrater =
-    new G4LogicalVolume(solidGrater,          //its solid
-                        Grater_mat,           //its material
-                        "Grater");            //its name
+      G4LogicalVolume* logicalCollimator =
+        new G4LogicalVolume(solidCollimator,          //its solid
+                            Collimator_mat,           //its material
+                            "Collimator");            //its name
 
-  G4VPhysicalVolume* physicalGrater =
-    new G4PVPlacement(0,                     //no rotation
-                      G4ThreeVector(0,0,-500*mm),       //at (0,0,0)
-                      logicalGrater,         //its logical volume
-                      "Grater",              //its name
-                      logicalWorld,          //its mother  volume
-                      false,                 //no boolean operation
-                      0,                     //copy number
-                      checkOverlaps);        //overlaps checking
+      G4VPhysicalVolume* physicalCollimator =
+        new G4PVPlacement(0,                     //no rotation
+                          G4ThreeVector(0,0,-500*mm),       //at (0,0,0)
+                          logicalCollimator,         //its logical volume
+                          "Collimator",              //its name
+                          logicalWorld,          //its mother  volume
+                          false,                 //no boolean operation
+                          0,                     //copy number
+                          checkOverlaps);        //overlaps checking
+    }
 
   // Set Target as scoring volume
   fScoringVolume = logicalTarget;

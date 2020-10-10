@@ -14,7 +14,9 @@ class G4LogicalVolume;
 class DetectorConstruction : public G4VUserDetectorConstruction
 {
   public:
-    DetectorConstruction();
+    DetectorConstruction(G4bool       collimator_input,
+                         G4double     collimator_radius_input,
+                         G4double     max_step_lenght_input);
     virtual ~DetectorConstruction();
 
     virtual G4VPhysicalVolume* Construct();
@@ -23,6 +25,10 @@ class DetectorConstruction : public G4VUserDetectorConstruction
 
   private:
     G4UserLimits*      StepLimit;
+    G4bool             collimator;
+    G4double           collimator_radius;
+    G4double           max_step_lenght;
+
   protected:
     G4LogicalVolume*  fScoringVolume;
 };

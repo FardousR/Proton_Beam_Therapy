@@ -16,11 +16,13 @@ class PrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
 {
   public:
       PrimaryGeneratorAction(G4double   beam_energy_input,
-                             G4double   beam_size_input,
                              G4double   beam_alpha_x_input,
                              G4double   beam_alpha_y_input,
                              G4double   beam_beta_x_input,
-                             G4double   beam_beta_y_input);
+                             G4double   beam_beta_y_input,
+                             G4double   sigma_x_input,
+                             G4double   sigma_y_input,
+                             G4double   gun_z_position_input);
 
     virtual ~PrimaryGeneratorAction();
 
@@ -37,15 +39,10 @@ class PrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
 
     G4ParticleDefinition* particle;     // Particle type
 
-    G4double epsN_x;                    // Normalized emittance  (x) [um]
+    // G4double epsN_x;                    // Normalized emittance  (x) [um]
     G4double epsG_x;                    // Geometrical emittance (x) [um]
-    G4double beta_x;                    // Beta function         (x) [m]
-    G4double alpha_x;                   // Alpha function        (x) [-]
-
-    G4double epsN_y;                    // Normalized emittance  (y) [um]
+    // G4double epsN_y;                    // Normalized emittance  (y) [um]
     G4double epsG_y;                    // Geometrical emittance (y) [um]
-    G4double beta_y;                    // Beta function         (y) [m]
-    G4double alpha_y;                   // Alpha function        (y) [-]
 
     // Beam covariance matrices [m,rad]
     TMatrixD covarX;
@@ -61,18 +58,16 @@ class PrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
     // Seed to use when random-generating particles within Twiss distribution
     G4int rngSeed;
 
-    //Setup for uniform energy distribution between min/max
-    G4double beam_energy_min; // [MeV]
-    G4double beam_energy_max; // [MeV]
-
-    G4double   beam_size;
     G4double   beam_alpha_x;
     G4double   beam_alpha_y;
     G4double   beam_beta_x;
     G4double   beam_beta_y;
+    G4double   sigma_x;
+    G4double   sigma_y;
+    G4double   gun_z_position;
 
 public:
-    G4double x,xp, y,yp, E;
+    G4double x,xp, y,yp;
 };
 
 #endif

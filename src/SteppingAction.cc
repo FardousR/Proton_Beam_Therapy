@@ -18,12 +18,6 @@
 #include "G4TrackVector.hh"
 #include "G4EmCalculator.hh"
 
-/*
-SteppingAction::SteppingAction(DetectorConstruction* detectorConstruction, RunAction* runAction, EventAction* eventAction)
-    :G4UserSteppingAction(), fDetector(detectorConstruction), fRunAction(runAction), fEventAction(eventAction)
-    {}
-*/
-
 SteppingAction::SteppingAction(EventAction* eventAction)
     :G4UserSteppingAction(), fEventAction(eventAction)
     {}
@@ -86,7 +80,7 @@ void SteppingAction::UserSteppingAction(const G4Step* step)
 
     // Get energy Deposition
     G4double EnergyDeposite = step->GetTotalEnergyDeposit();
-    G4double LET = emCal->ComputeElectronicDEDX(preKE, particleName, matName, .5*mm);
+    G4double LET = emCal->ComputeElectronicDEDX(preKE, particleName, matName, .2*mm);
 
     G4double steplength =step->GetStepLength();
     // Get the energy of the secondary
