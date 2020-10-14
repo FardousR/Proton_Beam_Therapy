@@ -47,8 +47,8 @@
 /vis/viewer/set/style surface
 /vis/viewer/set/hiddenMarker true
 
-# "Grater" is transparent blue to represent water
-/vis/geometry/set/colour Grater 0 1 0 1 .7
+# "Collimator" is transparent blue to represent water
+/vis/geometry/set/colour Collimator 0 1 0 1 .7
 /vis/viewer/set/style surface
 /vis/viewer/set/hiddenMarker true
 

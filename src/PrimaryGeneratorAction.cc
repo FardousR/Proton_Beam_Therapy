@@ -1,3 +1,4 @@
+
 #include "PrimaryGeneratorAction.hh"
 #include "G4ParticleGun.hh"
 #include "G4ParticleTable.hh"
@@ -49,13 +50,14 @@ PrimaryGeneratorAction::PrimaryGeneratorAction(G4double   beam_energy_input,
   epsG_x  = (sigma_x*sigma_x)/beam_beta_x;
   epsG_y  = (sigma_y*sigma_y)/beam_beta_y;
 
+
   //Create covariance matrices for x-xp [m^2, m * rad, rad^2]
   covarX.ResizeTo(2,2);
   covarX[0][0] =  beam_beta_x;
   covarX[0][1] = -beam_alpha_x;
   covarX[1][0] = -beam_alpha_x;
   covarX[1][1] = (1+beam_alpha_x*beam_alpha_x)/beam_beta_x;
-  covarX *= (epsG_x*1e-6);//
+  covarX *= (epsG_x);//*1e-6
 
   //Create covariance matrices for y-yp [m^2, m * rad, rad^2]
   covarY.ResizeTo(2,2);
@@ -63,14 +65,13 @@ PrimaryGeneratorAction::PrimaryGeneratorAction(G4double   beam_energy_input,
   covarY[0][1] = -beam_alpha_y;
   covarY[1][0] = -beam_alpha_y;
   covarY[1][1] = (1+beam_alpha_y*beam_alpha_y)/beam_beta_y;
-  covarY *= (epsG_y*1e-6);//
+  covarY *= (epsG_y);//*1e-6
 
   // Get the cholesky decomposition
   TDecompChol covarX_Utmp(covarX,1e-9);
   covarX_Utmp.Decompose();
   covarX_L.ResizeTo(covarX);
   covarX_L = covarX_Utmp.GetU();
-  // Get the lower-tridiagonal that is needed for the generation
   covarX_L.Transpose(covarX_L);
 
   TDecompChol covarY_Utmp(covarY,1e-9);
@@ -99,21 +100,22 @@ void PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
   G4double xpn             = RNG->Gaus(0,1);
   G4double particle_energy = RNG->Gaus(beam_energy, (beam_energy_spread/100)*beam_energy);
 
-  x  = (xn*covarX_L[0][0] + xpn*covarX_L[0][1])*m;
-  xp = (xn*covarX_L[1][0] + xpn*covarX_L[1][1])*rad;
+  x  = (xn*covarX_L[0][0] + xpn*covarX_L[0][1]);
+  xp = (xn*covarX_L[1][0] + xpn*covarX_L[1][1]);
 
   G4double yn  = RNG->Gaus(0,1);
   G4double ypn = RNG->Gaus(0,1);
-  y  = (yn*covarY_L[0][0] + ypn*covarY_L[0][1])*m;
-  yp = (yn*covarY_L[1][0] + ypn*covarY_L[1][1])*rad;
+  y  = (yn*covarY_L[0][0] + ypn*covarY_L[0][1]);
+  yp = (yn*covarY_L[1][0] + ypn*covarY_L[1][1]);
+
   fParticleGun->SetParticlePosition(G4ThreeVector( x, y, gun_z_position));
   fParticleGun->SetParticleMomentumDirection(G4ThreeVector(xp ,yp, 1));
   fParticleGun->SetParticleEnergy(particle_energy*MeV);
 
-  File<<x<<", ";
-  File<<xp<<", ";
-  File<<y<<", ";
-  File<<yp<<"\n";
+  File<<x/mm<<", ";
+  File<<xp/mrad<<", ";
+  File<<y/mm<<", ";
+  File<<yp/mrad<<"\n";
   File.close();
 
   fParticleGun->GeneratePrimaryVertex(anEvent);
