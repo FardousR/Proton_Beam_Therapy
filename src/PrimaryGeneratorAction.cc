@@ -113,9 +113,9 @@ void PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
   fParticleGun->SetParticleEnergy(particle_energy*MeV);
 
   File<<x/mm<<", ";
-  File<<xp/mrad<<", ";
+  File<<xp<<", ";
   File<<y/mm<<", ";
-  File<<yp/mrad<<"\n";
+  File<<yp<<"\n";
   File.close();
 
   fParticleGun->GeneratePrimaryVertex(anEvent);

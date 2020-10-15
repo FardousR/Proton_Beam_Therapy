@@ -32,7 +32,7 @@
 /vis/scene/notifyHandlers
 /vis/viewer/set/style surface
 /vis/viewer/set/hiddenMarker true
-/vis/geometry/set/colour Grater 0 1 0 1 .7
+/vis/geometry/set/colour Collimator 0 1 0 1 .7
 /vis/viewer/set/style surface
 /vis/viewer/set/hiddenMarker true
 /vis/filtering/trajectories/create/particleFilter
@@ -41,5 +41,5 @@
 /vis/viewer/set/autoRefresh true
 /vis/viewer/refresh
 /vis/verbose warnings
-/run/beamOn 100
+/run/beamOn 5000
 /vis/scene/notifyHandlers scene-0
